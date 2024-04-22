@@ -69,12 +69,13 @@ function SideBar(props) {
           <i
             className={sidebar ? "bx bx-menu" : "bx bx-menu-alt-right"}
             id="btn"
+            data-cy="sidebar-expand-btn"
             onClick={onClickBtn}
           ></i>
         </div>
         <ul className="nav_list">
           <li>
-            <a href="/">
+            <a href="/" data-cy="Home">
               <i className="bx bx-grid-alt"></i>
               <span className="links_name">Home</span>
             </a>
@@ -82,7 +83,7 @@ function SideBar(props) {
           </li>
 
           <li>
-            <a href="/sheets">
+            <a href="/sheets" data-cy="Sheets">
               <i className="bx bx-bookmarks"></i>
               <span className="links_name">Sheets</span>
             </a>
@@ -90,7 +91,7 @@ function SideBar(props) {
           </li>
 
           <li>
-            <a href="/composers">
+            <a href="/composers" data-cy="Composers">
               <i className="bx bx-user"></i>
               <span className="links_name">Composer</span>
             </a>
@@ -98,14 +99,14 @@ function SideBar(props) {
           </li>
 
           <li>
-            <a href="/search">
+            <a href="/search" data-cy="Search">
               <i className="bx bx-search-alt-2"></i>
               <span className="links_name">Search</span>
             </a>
             <span className="tooltip">Search</span>
           </li>
           <li>
-            <p onClick={() => setUploadModal(true)} className="cursor">
+            <p onClick={() => setUploadModal(true)} className="cursor" data-cy="Upload">
               <Modal
                 title="Upload"
                 onClose={() => setUploadModal(false)}
@@ -125,6 +126,7 @@ function SideBar(props) {
                 window.location.reload();
               }}
               className="cursor"
+              data-cy="Synchronize"
             >
               <i className="bx bx-sync"></i>
               <span className="links_name">Synchronize</span>
@@ -133,7 +135,7 @@ function SideBar(props) {
           </li>
 
           <li>
-            <a href="/settings">
+            <a href="/settings" data-cy="Settings">
               <i className="bx bx-cog"></i>
               <span className="links_name">Settings</span>
             </a>
@@ -145,10 +147,10 @@ function SideBar(props) {
             <div className="profile_details">
               <div className="name_job">
                 <div className="name">
-                  <span className="name">Account Email:</span>
+                  <span className="name" data-cy="account-email-text">Account Email:</span>
                 </div>
                 <div className="job">
-                  <span>{props.userData.email}</span>
+                  <span data-cy="profile-email">{props.userData.email}</span>
                 </div>
               </div>
             </div>
@@ -156,6 +158,7 @@ function SideBar(props) {
               <i
                 className="bx bx-log-out"
                 id="log_out"
+                data-cy="logout-button"
                 onClick={() => {
                   props.logoutUser();
                 }}

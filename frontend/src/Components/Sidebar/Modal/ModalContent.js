@@ -59,12 +59,13 @@ function ModalContent(props) {
 
   return (
     <div className="upload">
-      <form noValidate autoComplete="off">
+      <form noValidate autoComplete="off" data-cy="upload-text-boxes">
         <TextField
           id="standard-basic"
           label="Sheet Name"
           className="form-field"
           name="sheetName"
+          data-cy="sheetname-text-box"
           onChange={handleChange}
         />
         <TextField
@@ -72,6 +73,7 @@ function ModalContent(props) {
           label="Composer"
           className="form-field comp"
           name="composer"
+          data-cy="composer-text-box"
           onChange={handleChange}
         />
       </form>
@@ -80,6 +82,7 @@ function ModalContent(props) {
         variant="contained"
         color="primary"
         disabled={disabled}
+        data-cy="upload-btn"
         onClick={sendRequest}
       >
         Upload

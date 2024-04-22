@@ -59,7 +59,7 @@ const InteractiveForm = () => {
             {/*<div class="liner"></div>*/}
             <span>Information</span>
           </div>
-          <div class="step step-two">
+          <div class="step step-two" data-cy="Upload_title">
             {/*<div class="liner"></div>*/}
             <span>Upload</span>
           </div>

@@ -9,6 +9,10 @@
     "*.{js,css,md}": "prettier --write"
   },
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "cypress": "cypress open"
+  },
+  "dependencies": {
+    "cypress": "^13.6.6"
   }
 }

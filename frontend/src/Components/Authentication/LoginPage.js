@@ -144,6 +144,7 @@ class LoginPage extends Component {
               <div class="field">
                 <input
                   type="submit"
+                  data-cy="Login" 
                   value="Login"
                   onSubmit={this.handleSubmit}
                 />

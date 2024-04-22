@@ -9,10 +9,10 @@ function NoSheets() {
   return (
     <div className="notfound">
       <div className="notfound-404">
-        <h1>Oops!</h1>
-        <h2>Upload Sheets to begin</h2>
+        <h1 data-cy="oops-heading">Oops!</h1>
+        <h2 data-cy="begin-upload-heading">Upload Sheets to begin</h2>
       </div>
-      <p onClick={() => setUploadModal(true)} className="cursor">
+      <p onClick={() => setUploadModal(true)} data-cy="upload-btn" className="cursor">
         Upload Sheet
       </p>
       <Modal

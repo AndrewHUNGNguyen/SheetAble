@@ -47,9 +47,9 @@ const Modal = (props) => {
           ref={ref}
         >
           <div className="modal-header">
-            <h4 className="modal-title">{props.title}</h4>
+            <h4 className="modal-title" data-cy="upload-title">{props.title}</h4>
           </div>
-          <div className="modal-body">{props.children}</div>
+          <div className="modal-body" data-cy="upload-body">{props.children}</div>
         </div>
       </div>
     </CSSTransition>,
